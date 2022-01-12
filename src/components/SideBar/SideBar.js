@@ -1,10 +1,12 @@
 import Editor from '../Editor/Editor'
 import Header from '../Header/Header'
+import Instructions from '../Instruction/Instruction'
 import classes from './SideBar.module.css'
 
 const SideBar = () => {
     return <div  className={classes.sidebar}>
         <Header/>
+        <Instructions/>
         {/* <p>Добро пожаловать в Flexbox Froggy. Игра, в которой тебе нужно 
         помочь лягушонку Фроги и его друзьям написанием CSS кода! Направь 
         этого лягушонка на лилию справа используя свойство

@@ -3,8 +3,8 @@ import GameSlice from "./GameSlice";
 
 const store = configureStore({
     reducer: {
-        levels: GameSlice
+        game: GameSlice.reducer
     },
 })
-
+export const GameActions = GameSlice.actions
 export default store
