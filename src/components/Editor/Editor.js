@@ -7,7 +7,7 @@ const Editor = () => {
         <div className={classes.editor}>
             <div className={classes.css}>
                 <LineNumbers/>
-                <pre className={classes.pre}>#pond {"{   display: flex; "} </pre>
+                <pre className={classes.pre}>#pond {"{ display: flex; "} </pre>
                 <textarea autoFocus autoCapitalize='none' className={classes.code}></textarea>
                 <pre>{ '}' }</pre>
                 <Button className={classes.button}>Следующий</Button>

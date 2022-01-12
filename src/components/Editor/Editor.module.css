@@ -15,7 +15,7 @@
     justify-content: space-around;
     position: relative;
     padding: 10px 10px 10px 40px;
-    padding-top: 10px;
+    padding-top: 0px;
     padding-right: 10px;
     padding-bottom: 10px;
     padding-left: 40px;
@@ -48,6 +48,7 @@
     width: calc(100% - 16px);
     height: 24px;
     margin-left: 16px;
+    margin-bottom: 0px;
     border: none;
     border-top-color: initial;
     border-top-style: none;
