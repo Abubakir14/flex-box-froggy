@@ -1,0 +1,12 @@
+.frog.green .bg {
+    background-image: url('../../../assets/icons/frog-green.svg');
+    background-size: 60% 60%;
+}
+.frog.yellow .bg {
+    background-image: url('../../../assets/icons/frog-yellow.svg');
+    background-size: 60% 60%;
+}
+.frog.red .bg {
+    background-image: url('../../../assets/icons/frog-red.svg');
+    background-size: 60% 60%;
+}
