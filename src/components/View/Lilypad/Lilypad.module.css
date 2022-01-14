@@ -1,0 +1,17 @@
+.lilypad.green .bg {
+  background-image: url('../../../assets/icons/lilypad-green.svg');
+  background-size: 90% 90%;
+  transform: scale(0.887476) rotate(309.604deg);
+}
+
+.lilypad.yellow .bg {
+  background-image: url('../../../assets/icons/lilypad-yellow.svg');
+  background-size: 90% 90%;
+  transform: scale(0.887476) rotate(309.604deg);
+}
+
+.lilypad.red .bg {
+  background-image: url('../../../assets/icons/lilypad-red.svg');
+  background-size: 90% 90%;
+  transform: scale(0.887476) rotate(309.604deg);
+}

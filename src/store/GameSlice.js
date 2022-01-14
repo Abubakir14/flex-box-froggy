@@ -8,7 +8,7 @@ const initState = {
     levels: [
     {
         level: 1,
-        question: <p>
+        question: (<p>
         Добро пожаловать в Flexbox Froggy. Игра, в которой тебе нужно 
         помочь лягушонку Фроги и <br/> его друзьям написанием CSS кода! Направь 
         этого лягушонка на лилию справа используя <br/> свойство
@@ -46,11 +46,14 @@ const initState = {
         <br/>
     </div>
         Например, <code className={classes.help}>justify-content: flex-end;</code> сдвинет лягушонка вправо.
-    </p>
+    </p>),
+    pondheight: 1,
+    colors: ['green'],
+    lilypad: {justifyContent: 'flex-end'}
     },
     {
         level: 2,
-        question: <p>
+        question: (<p>
             Используй <code className={classes.help}>justify-content</code> еще раз, 
             чтоб помочь этим лягушатам попасть на их
             лилии.<br/> Помни, что это свойство CSS 
@@ -76,11 +79,14 @@ const initState = {
         <br/>
         <br/>
     </div>
-    </p>
+    </p>),
+    pondheight: 1,
+    colors: ['green', 'yellow'],
+    lilypad: {justifyContent: 'center'}
     },
     {
         level: 3,
-        question: <p>
+        question: (<p>
         Помоги всем трем лягушатам найти их лилии,
         просто используя <code className={classes.help}>justify-content.</code> В этот
         <br/>
@@ -91,19 +97,25 @@ const initState = {
         Если ты чувствуешь, что забыл возможные значения 
         свойства, ты можешь навести курсор на название свойства,
         чтоб посмотреть их. Попробуй навести курсор на <code className={classes.help}>justify-content.</code>
-        </p>
+        </p>),
+    pondheight: 1,
+    colors: ['green', 'yellow','red'],
+    lilypad: {justifyContent: 'space-around'}
     },
     {
         level: 4,
-        question: <p>
+        question: (<p>
         Теперь лилии по краям уплыли к берегам,
         увеличив пространство между ними. Используй <code className={classes.help}>justify-content.</code>
         В этот раз, у лилий одинаковое расстояние между ними.
-        </p>
+        </p>),
+    pondheight: 1,
+    colors: ['green', 'yellow','red'],
+    lilypad: {justifyContent: 'space-between'}
     },
     {
         level: 5,
-        question: <p>
+        question: (<p>
             Теперь используй <code className={classes.help}>align-items</code> чтоб помочь 
             лягушатам добратся к нижней части пруда. 
             <br/>
@@ -129,28 +141,37 @@ const initState = {
                 <br/>
                 <br/>
             </div>
-        </p>
+        </p>),
+    pondheight: 1,
+    colors: ['green', 'yellow','red'],
+    lilypad: {alignItems: 'flex-end'}
     },
     {
         level: 6,
-        question: <p>
+        question: (<p>
             Направь лягушонка в центр пруда, используя 
             <code className={classes.help}>justify-content</code> 
             и <code className={classes.help}>align-items</code> вместе.
-        </p>
+        </p>),
+    pondheight: 2,
+    colors: ['green'],
+    lilypad: {justifyContent: 'center',alignItems: 'center'}
     },
     {
         level: 7,
-        question: <p>
+        question: (<p>
             Лягушатам снова нужно пересечь пруд. 
             В этот раз к лилиям, с достаточно большим <br/>пространством 
             вокруг них. Используй комбинацию <code className={classes.help}>justify-content</code> 
             и <code className={classes.help}> align-items.</code>
-        </p>
+        </p>),
+    pondheight: 2,
+    colors: ['green', 'yellow','red'],
+    lilypad: {justifyContent: 'space-around',alignItems: 'flex-end'}
     },
     {
         level: 8,
-        question: <p>
+        question: (<p>
             Лягушатам нужно выстроиться в порядке их лилий, 
             используя <code className={classes.help}>flex-direction.</code> 
             Это CSS <br/> свойство задает
@@ -173,11 +194,14 @@ const initState = {
                 <br/>
                 <br/>
             </div>
-        </p>
+        </p>),
+    pondheight: 1,
+    colors: ['green', 'yellow','red'],
+    lilypad: {flexDirection: 'row-reverse'}
     },
     {
         level: 9,
-        question: <p>
+        question: (<p>
             Помоги лягушатам расположиться на своих
             лилиях используя <code className={classes.help}>flex-direction.</code>  Это CSS
             свойство задает направление, в котором будут
@@ -200,11 +224,14 @@ const initState = {
                 <br/>
                 <br/>
             </div>
-        </p>
+        </p>),
+    pondheight: 1,
+    colors: ['green', 'yellow','red'],
+    lilypad: {flexDirection: 'column'}
     },
     {
         level: 10,
-        question: <p>
+        question: (<p>
             Помоги лягушатам попасть на свои лилии.
             Хоть и кажется, что они почти на своих 
             местах, все же придется применить и 
@@ -217,11 +244,14 @@ const initState = {
             направление в обратном порядке для 
             ряда или колонки, начало (start) и 
             конец (end) тоже меняются местами.
-        </p>
+        </p>),
+    pondheight: 2,
+    colors: ['green','yellow','red'],
+    lilypad: {flexDirection: 'row-reverse',justifyContent: 'flex-end'}
     },
     {
         level: 11,
-        question: <p>
+        question: (<p>
             Помоги лягушатам найти их лилии с помощью <code className={classes.help}>flex-direction.</code> и 
             <code className={classes.help}>justify-content,</code> 
             <br/>
@@ -232,26 +262,35 @@ const initState = {
             влияет на вертикальное выравнивание, а 
             <code className={classes.help}>align-items,</code> 
             на горизонтальное.
-        </p>
+        </p>),
+    pondheight: 2,
+    colors: ['green', 'yellow','red'],
+    lilypad: {flexDirection: 'column',justifyContent: 'flex-end'}
     },
     {
         level: 12,
-        question: <p>
+        question: (<p>
             Помоги лягушатам найти их лилии с помощью <code className={classes.help}>flex-direction,</code> и 
             <code className={classes.help}>justify-content.</code>  <br/>
-        </p>
+        </p>),
+    pondheight: 2,
+    colors: ['red','yellow','green'],
+    lilypad: {flexDirection: 'column-reverse',justifyContent: 'space-between'}
     },
     {
         level: 13,
-        question: <p>
+        question: (<p>
             Помоги лягушатам найти их лилии с помощью <code className={classes.help}>flex-direction,</code>
             <code className={classes.help}>justify-content.</code> и <br/> 
             <code className={classes.help}>align-items.</code> 
-        </p>
+        </p>),
+    pondheight: 3,
+    colors: ['red','yellow','green'],
+    lilypad: {flexDirection: 'row-reverse',justifyContent: 'center',alignItems: 'flex-end'}
     },
     {
         level: 14,
-        question: <p>
+        question: (<p>
             Иногда изменения порядка отображения 
             элементов в контейнере недостаточно. 
             В таких <br/> случаях мы можем применить свойство 
@@ -262,22 +301,28 @@ const initState = {
             <br/>
             <br/>
             Используй свойство <code className={classes.help}>order.</code>, чтоб разместить лягушат на своих лилиях.
-        </p>
+        </p>),
+    pondheight: 1,
+    colors: ['green', 'yellow','red'],
     },
     {
         level: 15,
-        question: <p>
+        question: (<p>
             Используй свойство <code className={classes.help}>order.</code>, чтоб отправить красного лягушонка на его лилию.
-        </p>
+        </p>),
+    pondheight: 1,
+    colors: ['red','green','green','green','green']
     },
     {
         level: 16,
-        question: <p>
+        question: (<p>
             Еще одно свойство, которое ты 
             можешь применить к определенному 
             элементу это <code className={classes.help}>align-self.</code>Это свойство 
             принимает те же значения, что и <code className={classes.help}>align-items.</code>
-        </p>
+        </p>),
+    pondheight: 1,
+    colors: ['green','green','yellow','green','green']
     },
 ],
 }
