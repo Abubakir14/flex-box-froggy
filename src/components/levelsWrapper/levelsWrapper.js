@@ -11,8 +11,6 @@ const LevelsWrapper = () => {
         dispatch(GameActions.currentState(level))
     }
 
-
-
     return (
         <div className={`${classes.levelsWrapper} ${classes.tooltip}`}>
             <div className={classes.levels}>

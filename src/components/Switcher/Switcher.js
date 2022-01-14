@@ -8,15 +8,12 @@ import { GameActions } from "../../store"
 const Switcher = () => {
     const dispatch = useDispatch()
     const current = useSelector(state => state.game.currentLevel)
-    const levels = useSelector(state => state.game.levels)
     const [show, setShow] = useState(false)
     
     const Show = () => {
         setShow(prevState => !prevState)
     }
-    const nextLevel = (level) => {
-        dispatch(GameActions.currentState(level))
-    }
+
     const increment = () => {
         dispatch(GameActions.currentState(current + 1))
     }

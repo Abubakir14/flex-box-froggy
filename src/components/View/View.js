@@ -13,11 +13,11 @@ const View = () => {
         <div className={classes.view}>
             <div className={classes.board}>
                 <div className={classes.pond}>
-                    {level.colors.map((color) => (<Frog key={color} className={classes[color]}/>))}
+                    {level.colors.map((color, i) => (<Frog key={i + 1} className={classes[color]}/>))}
                 </div>
                 {console.log(level.lilypad)}
                 <div className={classes.background} style={level.lilypad}>
-                    {level.colors.map((color) => (<Lilypad key={color} className={classes[color]}/>))}
+                    {level.colors.map(( (index, i) => <Lilypad key={i} className={classes[index]}/>))}
                 </div>
                 </div>
             </div>
