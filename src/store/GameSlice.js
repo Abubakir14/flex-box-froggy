@@ -304,6 +304,7 @@ const initState = {
         </p>),
     pondheight: 1,
     colors: ['green', 'yellow','red'],
+    lilypadItem: {color: 'yellow', style: { order: '2'}}
     },
     {
         level: 15,
@@ -311,7 +312,8 @@ const initState = {
             Используй свойство <code className={classes.help}>order.</code>, чтоб отправить красного лягушонка на его лилию.
         </p>),
     pondheight: 1,
-    colors: ['red','green','green','green','green']
+    colors: ['green','green','green','red','green'],
+    lilypadItem: {color: 'red', style: { order: '-1'}}
     },
     {
         level: 16,
@@ -322,7 +324,8 @@ const initState = {
             принимает те же значения, что и <code className={classes.help}>align-items.</code>
         </p>),
     pondheight: 1,
-    colors: ['green','green','yellow','green','green']
+    colors: ['green','green','yellow','green','green'],
+    lilypadItem: {color: 'yellow', style: { alignSelf: 'flex-end'}}
     },
 ],
 }

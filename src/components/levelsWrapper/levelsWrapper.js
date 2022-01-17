@@ -15,9 +15,9 @@ const LevelsWrapper = () => {
         <div className={`${classes.levelsWrapper} ${classes.tooltip}`}>
             <div className={classes.levels}>
                 <span>
-                {levels.map((item) => {
+                {levels.map((item, index) => {
             return (
-              <LevelItem nextLevel={nextLevel} item={item}>
+              <LevelItem nextLevel={nextLevel} key={index + 2} item={item}>
                 {item.level}
               </LevelItem>
             );

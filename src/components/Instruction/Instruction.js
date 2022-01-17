@@ -1,6 +1,4 @@
-import { current } from '@reduxjs/toolkit';
 import React from 'react';
-// import classes from './Instructions.module.css';
 import { useSelector } from 'react-redux';
 
 function Instructions() {

@@ -1,12 +1,12 @@
 import React from 'react'
 import classes from '../View.module.css'
 
-const Lilypad = ({ className }) => {
+const Lilypad = ({ className, specialStyle }) => {
     return (
-      <div className={`${classes.lilypad} ${className}`}>
+      <div className={`${classes.lilypad} ${className}`} style={specialStyle}>
         <div className={classes.bg}></div>
-      </div>
+      </div> 
     );
-  };
+};
 
 export default Lilypad
