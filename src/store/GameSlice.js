@@ -4,7 +4,8 @@ import classes from './GameSlice.module.css'
 const initState = {
 
     currentLevel: 1,
-    
+    value: '',
+
     levels: [
     {
         level: 1,
@@ -47,9 +48,11 @@ const initState = {
     </div>
         Например, <code className={classes.help}>justify-content: flex-end;</code> сдвинет лягушонка вправо.
     </p>),
+    isValid: false,
+    trueAnswer: 'justify-content: flex-end;',
     pondheight: 1,
     colors: ['green'],
-    lilypad: {justifyContent: 'flex-end'}
+    lilypad: {justifyContent: 'flex-end'},
     },
     {
         level: 2,
@@ -80,6 +83,8 @@ const initState = {
         <br/>
     </div>
     </p>),
+    isValid: false,
+    trueAnswer: 'justify-content: center;',
     pondheight: 1,
     colors: ['green', 'yellow'],
     lilypad: {justifyContent: 'center'}
@@ -98,6 +103,8 @@ const initState = {
         свойства, ты можешь навести курсор на название свойства,
         чтоб посмотреть их. Попробуй навести курсор на <code className={classes.help}>justify-content.</code>
         </p>),
+    isValid: false,
+    trueAnswer: 'justify-content: space-around;',
     pondheight: 1,
     colors: ['green', 'yellow','red'],
     lilypad: {justifyContent: 'space-around'}
@@ -109,6 +116,8 @@ const initState = {
         увеличив пространство между ними. Используй <code className={classes.help}>justify-content.</code>
         В этот раз, у лилий одинаковое расстояние между ними.
         </p>),
+    isValid: false,
+    trueAnswer: 'justify-content: space-betwee;',
     pondheight: 1,
     colors: ['green', 'yellow','red'],
     lilypad: {justifyContent: 'space-between'}
@@ -142,6 +151,8 @@ const initState = {
                 <br/>
             </div>
         </p>),
+    isValid: false,
+    trueAnswer: 'align-items: flex-end;',
     pondheight: 1,
     colors: ['green', 'yellow','red'],
     lilypad: {alignItems: 'flex-end'}
@@ -153,6 +164,8 @@ const initState = {
             <code className={classes.help}>justify-content</code> 
             и <code className={classes.help}>align-items</code> вместе.
         </p>),
+    isValid: false,
+    trueAnswer: 'justify-content: center;align-items: center',
     pondheight: 2,
     colors: ['green'],
     lilypad: {justifyContent: 'center',alignItems: 'center'}
@@ -165,6 +178,8 @@ const initState = {
             вокруг них. Используй комбинацию <code className={classes.help}>justify-content</code> 
             и <code className={classes.help}> align-items.</code>
         </p>),
+    isValid: false,
+    trueAnswer: 'justify-content: space-around;align-items: flex-end',
     pondheight: 2,
     colors: ['green', 'yellow','red'],
     lilypad: {justifyContent: 'space-around',alignItems: 'flex-end'}
@@ -195,6 +210,8 @@ const initState = {
                 <br/>
             </div>
         </p>),
+    isValid: false,
+    trueAnswer: 'flex-direction: row-reverse',
     pondheight: 1,
     colors: ['green', 'yellow','red'],
     lilypad: {flexDirection: 'row-reverse'}
@@ -225,6 +242,8 @@ const initState = {
                 <br/>
             </div>
         </p>),
+    isValid: false,
+    trueAnswer: 'flex-direction: column',
     pondheight: 1,
     colors: ['green', 'yellow','red'],
     lilypad: {flexDirection: 'column'}
@@ -245,6 +264,8 @@ const initState = {
             ряда или колонки, начало (start) и 
             конец (end) тоже меняются местами.
         </p>),
+    isValid: false,
+    trueAnswer: 'flex-direction: row-reverse; justify-content: flex-end;',
     pondheight: 2,
     colors: ['green','yellow','red'],
     lilypad: {flexDirection: 'row-reverse',justifyContent: 'flex-end'}
@@ -263,6 +284,8 @@ const initState = {
             <code className={classes.help}>align-items,</code> 
             на горизонтальное.
         </p>),
+    isValid: false,
+    trueAnswer: 'flex-direction: colum; justify-content: flex-end;',
     pondheight: 2,
     colors: ['green', 'yellow','red'],
     lilypad: {flexDirection: 'column',justifyContent: 'flex-end'}
@@ -273,6 +296,8 @@ const initState = {
             Помоги лягушатам найти их лилии с помощью <code className={classes.help}>flex-direction,</code> и 
             <code className={classes.help}>justify-content.</code>  <br/>
         </p>),
+    isValid: false,
+    trueAnswer: 'flex-direction:column-revers; justify-content: space-between;',
     pondheight: 2,
     colors: ['red','yellow','green'],
     lilypad: {flexDirection: 'column-reverse',justifyContent: 'space-between'}
@@ -284,6 +309,8 @@ const initState = {
             <code className={classes.help}>justify-content.</code> и <br/> 
             <code className={classes.help}>align-items.</code> 
         </p>),
+    isValid: false,
+    trueAnswer: 'justify-content: center; flex-direction: row-reverse; align-items: flex-end;',
     pondheight: 3,
     colors: ['red','yellow','green'],
     lilypad: {flexDirection: 'row-reverse',justifyContent: 'center',alignItems: 'flex-end'}
@@ -302,6 +329,8 @@ const initState = {
             <br/>
             Используй свойство <code className={classes.help}>order.</code>, чтоб разместить лягушат на своих лилиях.
         </p>),
+    isValid: false,
+    trueAnswer: 'order: 1;',
     pondheight: 1,
     colors: ['green', 'yellow','red'],
     lilypadItem: {color: 'yellow', style: { order: '2'}}
@@ -311,6 +340,8 @@ const initState = {
         question: (<p>
             Используй свойство <code className={classes.help}>order.</code>, чтоб отправить красного лягушонка на его лилию.
         </p>),
+    isValid: false,
+    trueAnswer: 'order: -1;',
     pondheight: 1,
     colors: ['green','green','green','red','green'],
     lilypadItem: {color: 'red', style: { order: '-1'}}
@@ -323,6 +354,8 @@ const initState = {
             элементу это <code className={classes.help}>align-self.</code>Это свойство 
             принимает те же значения, что и <code className={classes.help}>align-items.</code>
         </p>),
+    isValid: false,
+    trueAnswer: 'align-self: flex-end;',
     pondheight: 1,
     colors: ['green','green','yellow','green','green'],
     lilypadItem: {color: 'yellow', style: { alignSelf: 'flex-end'}}
@@ -336,10 +369,23 @@ const GameSlice = createSlice({
     reducers: {
         currentState(state, action) {
             if (action.payload > 16 || action.payload === 0) {
-              return;
+                return;
             }
             state.currentLevel = action.payload 
-          },
+        },
+        gameStyle(state, action) {
+            state.value = action.payload;
+        },
+        complete(state) {
+            state.levels = state.levels.map((item) =>
+            item.level === state.currentLevel ? { ...item, isValid: true } : item
+            );
+        },
+        notComplete(state) {
+            state.levels = state.levels.map((item) =>
+            item.level === state.currentLevel ? { ...item, isValid: false } : item
+            );
+        },
     }
 }
 )
