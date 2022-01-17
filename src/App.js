@@ -4,7 +4,7 @@ import './App.css'
 
 function App() {
 
-  const styles = {
+  const stylesdiv = {
     display: 'flex',
     ['justify-content']: 'space-around',
     minWidth: '600px',
@@ -13,7 +13,7 @@ function App() {
     color: 'white'  
   }
 
-  return <div style={styles}>
+  return <div style={stylesdiv}>
     <SideBar/>
     <View/>
   </div>
